@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .add-event-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .add-event-form input,
+  .add-event-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-event-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-event-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Event List Container */
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .event-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    position: relative;
+  }
+  
+  .event-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  /* Buttons in Event Card */
+  .event-card .edit-button,
+  .event-card .delete-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .event-card .edit-button {
+    background-color: #007bff;
+  }
+  
+  .event-card .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .event-card .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .event-card .delete-button:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Edit List Section */
+  .edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .edit-actions .save-button,
+  .edit-actions .cancel-button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .edit-actions .save-button {
+    background-color: #28a745;
+  }
+  
+  .edit-actions .save-button:hover {
+    background-color: #218838;
+  }
+  
+  .edit-actions .cancel-button {
+    background-color: #6c757d;
+  }
+  
+  .edit-actions .cancel-button:hover {
+    background-color: #565e64;
+  }
+  
+  /* Edit List Inputs */
+  .edit-list input,
+  .edit-list textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Hover Effects for Cards */
+  .event-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .event-card {
+      width: 90%;
+    }
+  }
+  
+  .event-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .event-table th, .event-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .event-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .event-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .event-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .event-table .edit-button,
+  .event-table .delete-button,
+  .event-table .save-button,
+  .event-table .cancel-button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .event-table .edit-button {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .event-table .delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .event-table .save-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .event-table .cancel-button {
+    background-color: #9e9e9e;
+    color: white;
+  }
+  
+  .event-table button:hover {
+    opacity: 0.9;
+  }
+  

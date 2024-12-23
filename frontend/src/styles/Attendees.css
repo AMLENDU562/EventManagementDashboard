@@ -1,0 +1,57 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .add-attendee, .attendee-list {
+    margin-bottom: 20px;
+  }
+  
+  .add-attendee input, .add-attendee select {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .add-attendee button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-attendee button:hover {
+    background-color: #45a049;
+  }
+  
+  .attendee-list .attendee-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .attendee-list .attendee-item span {
+    margin-right: 10px;
+  }
+  
+  .attendee-list .attendee-item button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .attendee-list .attendee-item button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .attendee-list .attendee-item button:last-child:hover {
+    background-color: #da190b;
+  }
+  

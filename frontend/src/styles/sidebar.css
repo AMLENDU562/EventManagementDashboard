@@ -1,0 +1,102 @@
+/* Sidebar container */
+.sidebar-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 60px; /* Width when closed */
+  background-color: #2c3e50;
+  color: white;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.open {
+  width: 240px; /* Width when open */
+}
+
+/* Toggle button */
+.toggle-button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button:hover {
+  background-color: #1abc9c;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Content area */
+.content {
+  margin-left: 60px; /* Initially aligned to the closed sidebar */
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+.content.shifted {
+  margin-left: 240px; /* Shift content when sidebar opens */
+}
+
+/* Menu styling */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Hidden class for the menu items */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+/* Show the menu when the sidebar is open */
+.menu-item a:hover {
+  background-color: #34495e;
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar.open {
+    width: 200px;
+  }
+
+  .toggle-button {
+    font-size: 18px;
+  }
+}
