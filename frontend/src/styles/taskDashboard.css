@@ -41,29 +41,23 @@
     gap: 15px;
   }
   
-  .task-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  .task-table table {
+    width: 100%;
+    border-collapse: collapse;
   }
   
-  .task-card h3 {
-    margin: 0 0 10px;
+  .task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
   }
   
-  .task-card button {
-    margin-right: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  .task-table th {
+    background-color: #f4f4f4;
   }
   
-  .task-card button:hover {
-    background-color: #0056b3;
+  .task-table button {
+    margin-right: 5px;
   }
+  
   

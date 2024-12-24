@@ -98,21 +98,41 @@ export default function TaskTracker() {
         <button type="submit">Add Task</button>
       </form>
 
-      <div className="task-list">
-        {tasks.map((task) => (
-          <div key={task._id} className="task-card">
-            <h3>{task.name}</h3>
-            <p>Deadline: {task.deadline ? new Date(task.deadline).toLocaleDateString() : 'No deadline'}</p>
-            <p>Status: {task.status ? 'Completed' : 'Pending'}</p>
-            <p>Event : {task.event || 'Unlinked'}</p>
-            <button onClick={(e) => { e.preventDefault(); 
-              updateTask(task.name)}}>
-              Update Status
-            </button>
-            <button onClick={() => deleteTask(task.name)}>Delete</button>
-          </div>
-        ))}
+        <div className="task-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Deadline</th>
+                  <th>Status</th>
+                  <th>Event</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tasks.map((task) => (
+                  <tr key={task._id}>
+                    <td>{task.name}</td>
+                    <td>{task.deadline ? new Date(task.deadline).toLocaleDateString() : 'No deadline'}</td>
+                    <td>{task.status ? 'Completed' : 'Pending'}</td>
+                    <td>{task.event || 'Unlinked'}</td>
+                    <td>
+                      <button 
+                        onClick={(e) => { 
+                          e.preventDefault(); 
+                          updateTask(task.name);
+                        }}
+                      >
+                        Update Status
+                      </button>
+                      <button onClick={() => deleteTask(task.name)}>Delete</button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
       </div>
+
     </div>
   );
 }

@@ -46,55 +46,6 @@ body {
     justify-content: center;
   }
   
-  .event-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    position: relative;
-  }
-  
-  .event-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .event-card p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  /* Buttons in Event Card */
-  .event-card .edit-button,
-  .event-card .delete-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .event-card .edit-button {
-    background-color: #007bff;
-  }
-  
-  .event-card .edit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .event-card .delete-button {
-    background-color: #dc3545;
-  }
-  
-  .event-card .delete-button:hover {
-    background-color: #a71d2a;
-  }
   
   /* Edit List Section */
   .edit-actions {
