@@ -57,10 +57,10 @@ export default function Event() {
     
   };
 
-  const deleteTask = async (eventName, taskId) => {
+  const deleteTask = async (eventName) => {
     try {
-      await axios.delete('http://localhost:5000/deleteEventTask', {
-        data: { eventName, taskId },
+      await axios.delete('http://localhost:5000/api/deleteTask', {
+        data: { name:eventName},
       });
       fetchTasksForEvent(eventName);
     } catch (error) {
@@ -243,8 +243,8 @@ export default function Event() {
                         <thead>
                           <tr>
                             <th>Task Name</th>
-                            <th></th>
-                            <th></th>
+                            <th>Deadline</th>
+                            <th>Status</th>
                             <th>Actions</th>
                             
                           </tr>
@@ -253,6 +253,8 @@ export default function Event() {
                           {tasks[event.name].map((task) => (
                             <tr key={task._id}>
                               <td>{task.name}</td>
+                              <td>{new Date(task.deadline).toLocaleDateString()}</td>
+                              <td>{task.status?' Completed ':' Pending '}</td>
                               <td>
                                 <button onClick={() => deleteTask(task.name)}>Delete Task</button>
                               </td>
