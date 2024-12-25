@@ -17,6 +17,22 @@ export default function TaskTracker() {
     }
   };
 
+  const [events, setEvents] = useState([]);
+
+  // Fetch events from the API when the component mounts
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/getEvents');
+        setEvents(response.data); // Assume the API returns an array of events
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
   // Add a new task
   const addTask = async (e) => {
     e.preventDefault();
@@ -88,13 +104,18 @@ export default function TaskTracker() {
           onChange={handleInputChange}
         />
         
-        <input
-          type="text"
-          name="eventName"
-          placeholder="event"
-          value={taskForm.eventName}
-          onChange={handleInputChange}
-        />
+        <select
+              name="eventName"
+              value={taskForm.eventName}
+              onChange={handleInputChange}
+            >
+              <option value="" disabled>Select an event</option>
+              {events.map((event) => (
+                <option key={event._id} value={event.name}>
+                  {event.name}
+                </option>
+              ))}
+            </select>
         <button type="submit">Add Task</button>
       </form>
 
